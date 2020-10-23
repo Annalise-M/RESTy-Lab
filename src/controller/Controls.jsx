@@ -8,7 +8,6 @@ const Controls = ({
 }) => (
   <>
     <label htmlFor="search"></label>
-    
     <input 
       id="search"
       type="text"
@@ -21,43 +20,41 @@ const Controls = ({
         Send
     </button>
 
-    <label htmlFor="get">GET</label>
     <input 
       id="get"
-      type="text"
-      name="get"
+      type="radio"
+      name="method"
       value="get"
       onChange={onChange}
     />GET
     <input 
       id="post"
-      type="text"
-      name="post"
+      type="radio"
+      name="method"
       value="post"
       onChange={onChange}
     />POST
     <input 
       id="put"
-      type="text"
-      name="put"
+      type="radio"
+      name="method"
       value="put"
       onChange={onChange}
     />PUT
     <input 
       id="delete"
-      type="text"
-      name="delete"
+      type="radio"
+      name="method"
       value="delete"
       onChange={onChange}
     />DELETE
   </>
 );
 
-Controls.PropTypes = {
-  search: PropTypes.string.isRequired,
-  onSubmit: PropTypes.string.isRequired,
-  onChange: PropTypes.string.isRequired
+Controls.propTypes = {
+  search: PropTypes.any.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired
 };
 
 export default Controls;
-
